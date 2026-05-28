@@ -1,0 +1,121 @@
+@use 'sass:color';
+@use './common/var' as *;
+@use './mixins/mixins' as *;
+
+@include b(button) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $button-padding-vertical $button-padding-horizontal;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: 1;
+  border: 1px solid $border-color-base;
+  border-radius: $button-border-radius;
+  background-color: $color-white;
+  color: $text-color-primary;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
+    background-color: rgba($color-primary, 0.1);
+  }
+
+  &:active {
+    color: color.adjust($color-primary, $lightness: -10%);
+    border-color: color.adjust($color-primary, $lightness: -10%);
+  }
+
+  @include when(disabled) {
+    color: $text-color-disabled;
+    background-color: $color-white;
+    border-color: $border-color-lighter;
+    cursor: not-allowed;
+  }
+
+  @include m(primary) {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: 10%);
+      border-color: color.adjust($color-primary, $lightness: 10%);
+    }
+
+    @include when(disabled) {
+      color: $color-white;
+        background-color: color.adjust($color-primary, $lightness: 30%);
+        border-color: color.adjust($color-primary, $lightness: 30%);
+    }
+  }
+
+  @include m(success) {
+    color: $color-white;
+    background-color: $color-success;
+    border-color: $color-success;
+  }
+
+  @include m(warning) {
+    color: $color-white;
+    background-color: $color-warning;
+    border-color: $color-warning;
+  }
+
+  @include m(danger) {
+    color: $color-white;
+    background-color: $color-danger;
+    border-color: $color-danger;
+  }
+
+  @include m(info) {
+    color: $color-white;
+    background-color: $color-info;
+    border-color: $color-info;
+  }
+
+  @include m(large) {
+    padding: 12px 19px;
+    font-size: $font-size-large;
+    border-radius: $border-radius-base;
+  }
+
+  @include m(small) {
+    padding: 5px 11px;
+    font-size: $font-size-small;
+    border-radius: calc($border-radius-base - 1px);
+  }
+
+  @include when(round) {
+    border-radius: $border-radius-round;
+  }
+
+  @include when(circle) {
+    border-radius: $border-radius-circle;
+    padding: $button-padding-vertical;
+  }
+
+  @include when(plain) {
+    background-color: color.adjust($color-primary, $lightness: 40%);
+    color: $color-primary;
+    border-color: color.adjust($color-primary, $lightness: 20%);
+  }
+
+  @include when(text) {
+    color: $color-primary;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+@include b(button) {
+  @include e(content) {
+    display: inline-flex;
+    align-items: center;
+  }
+}

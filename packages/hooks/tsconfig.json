@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.web.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist/es",
+    "declarationDir": "dist/es",
+    "rootDir": "."
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

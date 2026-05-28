@@ -1,0 +1,35 @@
+@use '../common/var' as *;
+
+@mixin b($block) {
+  $B: $namespace + '-' + $block;
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $selector: &;
+  @at-root {
+    #{$selector + '__' + $element} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $selector: &;
+  @at-root {
+    #{$selector + '--' + $modifier} {
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  $selector: &;
+  @at-root {
+    #{$selector + '.is-' + $state} {
+      @content;
+    }
+  }
+}

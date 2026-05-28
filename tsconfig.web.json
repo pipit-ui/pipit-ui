@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "allowJs": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
+  },
+  "include": [
+    "packages/pipit-ui/**/*.ts",
+    "packages/pipit-ui/**/*.vue",
+    "packages/pipit-ui/global.d.ts",
+    "packages/components/**/*.ts",
+    "packages/components/**/*.vue",
+    "packages/constants/**/*.ts",
+    "packages/directives/**/*.ts",
+    "packages/hooks/**/*.ts",
+    "packages/locale/**/*.ts",
+    "packages/utils/**/*.ts"
+  ]
+}

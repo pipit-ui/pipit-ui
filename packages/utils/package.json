@@ -1,0 +1,24 @@
+{
+  "name": "@pipit-ui/utils",
+  "version": "0.0.1",
+  "description": "Utilities for pipit-ui",
+  "type": "module",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.mjs",
+  "types": "dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/lib/index.js"
+    },
+    "./vue": {
+      "types": "./dist/es/vue/index.d.ts",
+      "import": "./dist/es/vue/index.mjs",
+      "require": "./dist/lib/vue/index.js"
+    },
+    "./es/*": "./dist/es/*",
+    "./lib/*": "./dist/lib/*"
+  },
+  "files": ["dist"]
+}

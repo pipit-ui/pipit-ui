@@ -1,0 +1,19 @@
+{
+  "name": "@pipit-ui/play",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "pipit-ui": "workspace:*",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "sass-embedded": "^1.100.0",
+    "vite": "^6.3.1"
+  }
+}

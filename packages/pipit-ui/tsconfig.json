@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.web.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist/es",
+    "declarationDir": "dist/es",
+    "rootDir": ".."
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.vue",
+    "global.d.ts",
+    "../es-entry.ts",
+    "../components/**/*.ts",
+    "../components/**/*.vue",
+    "../constants/**/*.ts",
+    "../directives/**/*.ts",
+    "../hooks/**/*.ts",
+    "../locale/**/*.ts",
+    "../utils/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

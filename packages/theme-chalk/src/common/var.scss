@@ -1,0 +1,40 @@
+$namespace: 'pt' !default;
+
+// colors
+$color-primary: #409eff !default;
+$color-success: #67c23a !default;
+$color-warning: #e6a23c !default;
+$color-danger: #f56c6c !default;
+$color-info: #909399 !default;
+
+$color-white: #ffffff !default;
+$color-black: #000000 !default;
+
+// text
+$text-color-primary: #303133 !default;
+$text-color-regular: #606266 !default;
+$text-color-secondary: #909399 !default;
+$text-color-placeholder: #a8abb2 !default;
+$text-color-disabled: #c0c4cc !default;
+
+// border
+$border-color-base: #dcdfe6 !default;
+$border-color-light: #e4e7ed !default;
+$border-color-lighter: #ebeef5 !default;
+$border-color-extra-light: #f2f6fc !default;
+$border-radius-base: 4px !default;
+$border-radius-small: 2px !default;
+$border-radius-round: 20px !default;
+$border-radius-circle: 50% !default;
+
+// font
+$font-size-large: 16px !default;
+$font-size-base: 14px !default;
+$font-size-small: 12px !default;
+
+// button
+$button-font-weight: 500 !default;
+$button-padding-vertical: 8px !default;
+$button-padding-horizontal: 15px !default;
+$button-font-size: $font-size-base !default;
+$button-border-radius: $border-radius-base !default;

@@ -1,0 +1,36 @@
+{
+  "name": "@pipit-ui/components",
+  "version": "0.0.1",
+  "description": "Components for pipit-ui",
+  "type": "module",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.mjs",
+  "types": "dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/lib/index.js"
+    },
+    "./button": {
+      "types": "./dist/es/button/index.d.ts",
+      "import": "./dist/es/button/index.mjs",
+      "require": "./dist/lib/button/index.js"
+    },
+    "./icon": {
+      "types": "./dist/es/icon/index.d.ts",
+      "import": "./dist/es/icon/index.mjs",
+      "require": "./dist/lib/icon/index.js"
+    },
+    "./es/*": "./dist/es/*",
+    "./lib/*": "./dist/lib/*"
+  },
+  "files": ["dist"],
+  "dependencies": {
+    "@pipit-ui/utils": "workspace:*",
+    "@pipit-ui/hooks": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  }
+}

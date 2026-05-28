@@ -1,0 +1,8 @@
+{
+  "name": "@pipit-ui/build",
+  "version": "0.0.1",
+  "description": "Build utilities for pipit-ui",
+  "type": "module",
+  "private": true,
+  "main": "src/index.ts"
+}
