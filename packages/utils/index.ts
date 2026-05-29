@@ -10,6 +10,6 @@ export const isObject = (value: unknown): value is Record<string, unknown> =>
 
 export const isArray = Array.isArray
 
-export const isFunction = (value: unknown): value is Function => typeof value === 'function'
+export const isFunction = (value: unknown): value is (...args: unknown[]) => unknown => typeof value === 'function'
 
 export const isBoolean = (value: unknown): value is boolean => typeof value === 'boolean'

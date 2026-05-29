@@ -16,8 +16,14 @@
     :type="nativeType"
     @click="handleClick"
   >
-    <span v-if="loading" :class="bem.e('loading')"></span>
-    <span v-if="$slots.icon && !loading" :class="bem.e('icon')">
+    <span
+      v-if="loading"
+      :class="bem.e('loading')"
+    />
+    <span
+      v-if="$slots.icon && !loading"
+      :class="bem.e('icon')"
+    >
       <slot name="icon" />
     </span>
     <span :class="bem.e('content')">

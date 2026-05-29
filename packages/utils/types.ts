@@ -1,4 +1,4 @@
-import type { App, Plugin } from 'vue'
+import type { Plugin } from 'vue'
 
 export const INSTALLED_KEY = Symbol('INSTALLED_KEY')
 

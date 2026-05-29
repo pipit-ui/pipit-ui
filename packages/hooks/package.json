@@ -1,6 +1,6 @@
 {
   "name": "@pipit-ui/hooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hooks for pipit-ui",
   "type": "module",
   "main": "dist/lib/index.js",
@@ -20,9 +20,11 @@
     "./es/*": "./dist/es/*",
     "./lib/*": "./dist/lib/*"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "@pipit-ui/constants": "workspace:*"
+    "@pipit-ui/constants": "0.0.2"
   },
   "peerDependencies": {
     "vue": "^3.5.0"

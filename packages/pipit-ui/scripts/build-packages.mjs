@@ -73,7 +73,7 @@ async function buildPackageTypes(packageName) {
       { cwd: packageDir, stdio: 'inherit' }
     )
     console.log(`Built ${packageName} types to dist/es`)
-  } catch (err) {
+  } catch (_err) {
     console.warn(`Warning: Failed to build types for ${packageName}, skipping...`)
   }
 }

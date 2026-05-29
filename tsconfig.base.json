@@ -18,7 +18,20 @@
     "declarationDir": "./dist/types",
     "outDir": "./dist",
     "rootDir": ".",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@pipit-ui/components": ["packages/components/index.ts"],
+      "@pipit-ui/components/*": ["packages/components/*/index.ts"],
+      "@pipit-ui/constants": ["packages/constants/index.ts"],
+      "@pipit-ui/directives": ["packages/directives/index.ts"],
+      "@pipit-ui/hooks": ["packages/hooks/index.ts"],
+      "@pipit-ui/hooks/*": ["packages/hooks/*"],
+      "@pipit-ui/locale": ["packages/locale/index.ts"],
+      "@pipit-ui/utils": ["packages/utils/index.ts"],
+      "@pipit-ui/utils/*": ["packages/utils/*"],
+      "@pipit-ui/theme-chalk": ["packages/theme-chalk"],
+      "@pipit-ui/theme-chalk/*": ["packages/theme-chalk/*"]
+    }
   },
   "exclude": ["node_modules", "dist"]
 }

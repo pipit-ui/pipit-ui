@@ -6,7 +6,7 @@ export const withInstall = <T>(component: T, alias?: string): SFCWithInstall<T> 
     const comp = component as any
     const name = comp.name || comp.__name
 
-    if (name && !(app.config.globalProperties as any)[INSTALLED_KEY]) {
+    if (name) {
       app.component(name, component as any)
       if (alias) {
         app.component(alias, component as any)

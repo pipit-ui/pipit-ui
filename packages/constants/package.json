@@ -1,6 +1,6 @@
 {
   "name": "@pipit-ui/constants",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Constants for pipit-ui",
   "type": "module",
   "main": "dist/lib/index.js",
@@ -15,5 +15,7 @@
     "./es/*": "./dist/es/*",
     "./lib/*": "./dist/lib/*"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }

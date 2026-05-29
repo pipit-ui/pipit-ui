@@ -7,6 +7,13 @@
 
 ## [Unreleased]
 
+## [0.0.2] - 2026-05-29
+
+### Added
+
+- Release v0.0.2
+
+
 ### Added
 
 - PtButton 组件

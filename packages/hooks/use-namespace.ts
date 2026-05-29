@@ -1,4 +1,4 @@
-import { unref, type MaybeRef } from 'vue'
+import { type MaybeRef } from 'vue'
 import { defaultNamespace } from '@pipit-ui/constants'
 
 const statePrefix = 'is-'

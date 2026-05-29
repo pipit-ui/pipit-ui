@@ -34,6 +34,7 @@ export default defineConfig({
           items: [
             { text: 'Button 按钮', link: '/components/button' },
             { text: 'Icon 图标', link: '/components/icon' },
+            { text: 'Table 表格', link: '/components/table' },
           ],
         },
       ],

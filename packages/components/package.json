@@ -1,6 +1,6 @@
 {
   "name": "@pipit-ui/components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Components for pipit-ui",
   "type": "module",
   "main": "dist/lib/index.js",
@@ -22,13 +22,20 @@
       "import": "./dist/es/icon/index.mjs",
       "require": "./dist/lib/icon/index.js"
     },
+    "./table": {
+      "types": "./dist/es/table/index.d.ts",
+      "import": "./dist/es/table/index.mjs",
+      "require": "./dist/lib/table/index.js"
+    },
     "./es/*": "./dist/es/*",
     "./lib/*": "./dist/lib/*"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "@pipit-ui/utils": "workspace:*",
-    "@pipit-ui/hooks": "workspace:*"
+    "@pipit-ui/utils": "0.0.2",
+    "@pipit-ui/hooks": "0.0.2"
   },
   "peerDependencies": {
     "vue": "^3.5.0"

@@ -1,5 +1,5 @@
 import { makeInstaller } from '@pipit-ui/utils'
-import { PtButton, PtIcon } from '@pipit-ui/components'
+import { PtButton, PtIcon, PtTable } from '@pipit-ui/components'
 
 import '@pipit-ui/theme-chalk/src/index.scss'
 
@@ -8,6 +8,7 @@ import type { Plugin } from 'vue'
 export const installer = makeInstaller([
   PtButton,
   PtIcon,
+  PtTable,
 ] as unknown as Plugin[])
 
 export const install = installer.install

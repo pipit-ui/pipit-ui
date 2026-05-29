@@ -6,7 +6,7 @@ import * as sass from 'sass-embedded'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const src = resolve(__dirname, '../../theme-chalk/src')
 const dest = resolve(__dirname, '../dist/theme-chalk')
-const entries = ['index.scss', 'button.scss', 'icon.scss']
+const entries = ['index.scss', 'button.scss', 'icon.scss', 'table.scss']
 
 await cp(src, dest, { recursive: true })
 console.log('Theme SCSS files copied to dist/theme-chalk')

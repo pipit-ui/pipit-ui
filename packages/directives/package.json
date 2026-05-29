@@ -1,6 +1,6 @@
 {
   "name": "@pipit-ui/directives",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Directives for pipit-ui",
   "type": "module",
   "main": "dist/lib/index.js",
@@ -15,7 +15,9 @@
     "./es/*": "./dist/es/*",
     "./lib/*": "./dist/lib/*"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "vue": "^3.5.0"
   }
