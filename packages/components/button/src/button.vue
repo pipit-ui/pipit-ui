@@ -27,6 +27,7 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { useNamespace } from '@pipit-ui/hooks'
 import type { ButtonProps, ButtonType, ButtonSize } from './button'
 
@@ -34,7 +35,7 @@ defineOptions({
   name: 'PtButton',
 })
 
-withDefaults(defineProps<ButtonProps>(), {
+const props = withDefaults(defineProps<ButtonProps>(), {
   type: 'default' as ButtonType,
   size: 'default' as ButtonSize,
   disabled: false,
@@ -43,19 +44,19 @@ withDefaults(defineProps<ButtonProps>(), {
   circle: false,
   plain: false,
   text: false,
+  nativeType: 'button',
 })
 
 const emit = defineEmits<{
   click: [evt: MouseEvent]
 }>()
 
+const _ref = ref<HTMLButtonElement>()
 const bem = useNamespace('button')
 
 const handleClick = (evt: MouseEvent) => {
-  emit('click', evt)
+  if (!props.disabled && !props.loading) {
+    emit('click', evt)
+  }
 }
-</script>
-
-<script lang="ts">
-export const nativeType = 'button'
 </script>

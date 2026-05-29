@@ -5,4 +5,4 @@ import Button from './src/button.vue'
 export const PtButton = withInstall(Button)
 export default PtButton
 
-export type { ButtonProps, ButtonType, ButtonSize } from './src/button'
+export type { ButtonProps, ButtonType, ButtonSize, NativeType } from './src/button'
