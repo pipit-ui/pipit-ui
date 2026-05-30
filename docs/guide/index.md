@@ -1,6 +1,6 @@
 # 快速开始
 
-MoJie UI 是一个基于 Vue 3 + TypeScript 构建的组件库。
+Pipit UI 是一个基于 Vue 3 + TypeScript 构建的组件库。
 
 ## 特性
 

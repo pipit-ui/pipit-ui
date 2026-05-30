@@ -1,0 +1,8 @@
+@use './common/var' as *;
+@use './mixins/mixins' as *;
+
+@include b(container) {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+}

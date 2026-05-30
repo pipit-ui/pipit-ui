@@ -1,10 +1,10 @@
 ---
 layout: home
-title: MoJie UI
+title: Pipit UI
 titleTemplate: 一个基于 Vue 3 的组件库
 
 hero:
-  name: MoJie UI
+  name: Pipit UI
   text: 基于 Vue 3 的组件库
   tagline: 简单、易用、高质量的 Vue 3 组件库
   actions:
@@ -16,7 +16,7 @@ hero:
       link: /components/button
   image:
     src: /logo.svg
-    alt: MoJie UI
+    alt: Pipit UI
 
 features:
   - icon: 🚀

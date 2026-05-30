@@ -34,8 +34,8 @@
     "dist"
   ],
   "dependencies": {
-    "@pipit-ui/utils": "0.0.2",
-    "@pipit-ui/hooks": "0.0.2"
+    "@pipit-ui/utils": "workspace:*",
+    "@pipit-ui/hooks": "workspace:*"
   },
   "peerDependencies": {
     "vue": "^3.5.0"

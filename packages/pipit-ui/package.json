@@ -46,13 +46,13 @@
     "vue": "^3.5.0"
   },
   "dependencies": {
-    "@pipit-ui/components": "0.0.2",
-    "@pipit-ui/constants": "0.0.2",
-    "@pipit-ui/directives": "0.0.2",
-    "@pipit-ui/hooks": "0.0.2",
-    "@pipit-ui/locale": "0.0.2",
-    "@pipit-ui/theme-chalk": "0.0.2",
-    "@pipit-ui/utils": "0.0.2"
+    "@pipit-ui/components": "workspace:*",
+    "@pipit-ui/constants": "workspace:*",
+    "@pipit-ui/directives": "workspace:*",
+    "@pipit-ui/hooks": "workspace:*",
+    "@pipit-ui/locale": "workspace:*",
+    "@pipit-ui/theme-chalk": "workspace:*",
+    "@pipit-ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",

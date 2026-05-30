@@ -1,13 +1,31 @@
 import { makeInstaller } from '@pipit-ui/utils'
-import { PtButton, PtIcon, PtTable } from '@pipit-ui/components'
+import {
+  PtAside,
+  PtButton,
+  PtCol,
+  PtContainer,
+  PtFooter,
+  PtHeader,
+  PtIcon,
+  PtMain,
+  PtRow,
+  PtTable,
+} from '@pipit-ui/components'
 
 import '@pipit-ui/theme-chalk/src/index.scss'
 
 import type { Plugin } from 'vue'
 
 export const installer = makeInstaller([
+  PtAside,
   PtButton,
+  PtCol,
+  PtContainer,
+  PtFooter,
+  PtHeader,
   PtIcon,
+  PtMain,
+  PtRow,
   PtTable,
 ] as unknown as Plugin[])
 

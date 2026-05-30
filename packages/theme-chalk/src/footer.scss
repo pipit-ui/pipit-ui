@@ -1,0 +1,9 @@
+@use './common/var' as *;
+@use './mixins/mixins' as *;
+
+@include b(footer) {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: 60px;
+  padding: 0 20px;
+}

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'MoJie UI',
+  title: 'Pipit UI',
   description: 'A Vue 3 based Component Library',
   lang: 'zh-CN',
   base: '/',
@@ -33,7 +33,9 @@ export default defineConfig({
           text: 'Basic',
           items: [
             { text: 'Button 按钮', link: '/components/button' },
+            { text: 'Container 布局容器', link: '/components/container' },
             { text: 'Icon 图标', link: '/components/icon' },
+            { text: 'Layout 布局', link: '/components/layout' },
             { text: 'Table 表格', link: '/components/table' },
           ],
         },
@@ -48,7 +50,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright 2024-present MoJie UI',
+      copyright: 'Copyright 2024-present Pipit UI',
     },
   },
 })

@@ -1,6 +1,13 @@
 @use './common/var.scss';
 @use './mixins/mixins.scss';
 
+@use './aside.scss';
 @use './button.scss';
+@use './col.scss';
+@use './container.scss';
+@use './footer.scss';
+@use './header.scss';
 @use './icon.scss';
+@use './main.scss';
+@use './row.scss';
 @use './table.scss';

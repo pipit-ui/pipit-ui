@@ -1,0 +1,116 @@
+@use 'sass:math';
+@use './common/var' as *;
+@use './mixins/mixins' as *;
+
+$total-columns: 24;
+
+@include b(col) {
+  box-sizing: border-box;
+}
+
+@for $i from 0 through $total-columns {
+  @if $i > 0 {
+    @include b(col) {
+      @include m('#{$i}') {
+        max-width: math.percentage(math.div($i, $total-columns));
+        flex: 0 0 math.percentage(math.div($i, $total-columns));
+      }
+
+      @include m('offset-#{$i}') {
+        margin-left: math.percentage(math.div($i, $total-columns));
+      }
+
+      @include m('push-#{$i}') {
+        left: math.percentage(math.div($i, $total-columns));
+        position: relative;
+      }
+
+      @include m('pull-#{$i}') {
+        right: math.percentage(math.div($i, $total-columns));
+        position: relative;
+      }
+    }
+  }
+}
+
+$breakpoints: (
+  'xs': 768px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px,
+  'xl': 1920px,
+);
+
+@each $key, $min-width in $breakpoints {
+  @if $key == 'xs' {
+    @media (max-width: #{calc($min-width - 1px)}) {
+      @for $i from 0 through $total-columns {
+        @if $i > 0 {
+          @include b(col) {
+            @include m('#{$key}-#{$i}') {
+              max-width: math.percentage(math.div($i, $total-columns));
+              flex: 0 0 math.percentage(math.div($i, $total-columns));
+            }
+
+            @include m('#{$key}-offset-#{$i}') {
+              margin-left: math.percentage(math.div($i, $total-columns));
+            }
+
+            @include m('#{$key}-push-#{$i}') {
+              left: math.percentage(math.div($i, $total-columns));
+              position: relative;
+            }
+
+            @include m('#{$key}-pull-#{$i}') {
+              right: math.percentage(math.div($i, $total-columns));
+              position: relative;
+            }
+          }
+        }
+
+        @if $i == 0 {
+          @include b(col) {
+            @include m('#{$key}-#{$i}') {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @media (min-width: $min-width) {
+      @for $i from 0 through $total-columns {
+        @if $i > 0 {
+          @include b(col) {
+            @include m('#{$key}-#{$i}') {
+              max-width: math.percentage(math.div($i, $total-columns));
+              flex: 0 0 math.percentage(math.div($i, $total-columns));
+            }
+
+            @include m('#{$key}-offset-#{$i}') {
+              margin-left: math.percentage(math.div($i, $total-columns));
+            }
+
+            @include m('#{$key}-push-#{$i}') {
+              left: math.percentage(math.div($i, $total-columns));
+              position: relative;
+            }
+
+            @include m('#{$key}-pull-#{$i}') {
+              right: math.percentage(math.div($i, $total-columns));
+              position: relative;
+            }
+          }
+        }
+
+        @if $i == 0 {
+          @include b(col) {
+            @include m('#{$key}-#{$i}') {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

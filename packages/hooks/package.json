@@ -24,7 +24,7 @@
     "dist"
   ],
   "dependencies": {
-    "@pipit-ui/constants": "0.0.2"
+    "@pipit-ui/constants": "workspace:*"
   },
   "peerDependencies": {
     "vue": "^3.5.0"

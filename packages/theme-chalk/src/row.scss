@@ -1,0 +1,45 @@
+@use './common/var' as *;
+@use './mixins/mixins' as *;
+
+@include b(row) {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    display: flex;
+  }
+
+  @include when(center) {
+    justify-content: center;
+  }
+
+  @include when(end) {
+    justify-content: flex-end;
+  }
+
+  @include when(space-between) {
+    justify-content: space-between;
+  }
+
+  @include when(space-around) {
+    justify-content: space-around;
+  }
+
+  @include when(space-evenly) {
+    justify-content: space-evenly;
+  }
+
+  @include when(align-top) {
+    align-items: flex-start;
+  }
+
+  @include when(align-middle) {
+    align-items: center;
+  }
+
+  @include when(align-bottom) {
+    align-items: flex-end;
+  }
+}

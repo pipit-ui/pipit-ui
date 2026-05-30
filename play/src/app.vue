@@ -68,6 +68,51 @@
         <pt-table :data="[]" :columns="columns" />
       </div>
     </div>
+    <div class="demo-section">
+      <h2>Container 布局容器</h2>
+      <div class="demo-row" style="flex-direction: column; align-items: stretch;">
+        <h3>Header + Main</h3>
+        <pt-container>
+          <pt-header>Header</pt-header>
+          <pt-main>Main</pt-main>
+        </pt-container>
+      </div>
+      <div class="demo-row" style="flex-direction: column; align-items: stretch;">
+        <h3>Header + Main + Footer</h3>
+        <pt-container>
+          <pt-header>Header</pt-header>
+          <pt-main>Main</pt-main>
+          <pt-footer>Footer</pt-footer>
+        </pt-container>
+      </div>
+      <div class="demo-row" style="flex-direction: column; align-items: stretch;">
+        <h3>Aside + Main</h3>
+        <pt-container>
+          <pt-aside width="200px">Aside</pt-aside>
+          <pt-main>Main</pt-main>
+        </pt-container>
+      </div>
+      <div class="demo-row" style="flex-direction: column; align-items: stretch;">
+        <h3>Header + Aside + Main</h3>
+        <pt-container>
+          <pt-header>Header</pt-header>
+          <pt-container>
+            <pt-aside width="200px">Aside</pt-aside>
+            <pt-main>Main</pt-main>
+          </pt-container>
+        </pt-container>
+      </div>
+      <div class="demo-row" style="flex-direction: column; align-items: stretch;">
+        <h3>Aside + Header + Main</h3>
+        <pt-container>
+          <pt-aside width="200px">Aside</pt-aside>
+          <pt-container>
+            <pt-header>Header</pt-header>
+            <pt-main>Main</pt-main>
+          </pt-container>
+        </pt-container>
+      </div>
+    </div>
   </div>
 </template>
 
