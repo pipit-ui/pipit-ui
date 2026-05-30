@@ -40,6 +40,6 @@ jobs:
         with:
           node-version: 18
           cache: pnpm
-      - run: store prune
+      - run: pnpm store prune
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm build
