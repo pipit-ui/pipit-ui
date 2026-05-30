@@ -12,11 +12,34 @@ const pkgRoot = resolve(packageDir, '..')
 const rootDir = resolve(pkgRoot, '..')
 const entryFile = resolve(pkgRoot, 'es-entry.ts')
 
+const workspaceAliases = [
+  'components',
+  'constants',
+  'directives',
+  'hooks',
+  'locale',
+  'utils',
+]
+
+function aliasWorkspace() {
+  return {
+    name: 'alias-workspace',
+    resolveId(source) {
+      const matched = source.match(/^@pipit-ui\/(.+)$/)
+      if (matched && workspaceAliases.includes(matched[1])) {
+        return resolve(pkgRoot, matched[1], 'index.ts')
+      }
+      return null
+    },
+  }
+}
+
 async function buildModule(format, outDir, ext) {
   const bundle = await rollup({
     input: entryFile,
     external: ['vue'],
     plugins: [
+      aliasWorkspace(),
       nodeResolve({
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue', '.mjs'],
         rootDir,
