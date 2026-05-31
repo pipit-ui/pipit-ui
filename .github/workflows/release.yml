@@ -31,14 +31,25 @@ jobs:
       
       - run: pnpm build
 
-      - name: Verify package contents
-        run: npm pack --dry-run
-        working-directory: packages/pipit-ui
+      - name: Build sub-packages
+        run: pnpm build:packages
 
-      - name: Publish to npm
+      - name: Create .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish sub-packages
         run: |
-          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
-          npm publish --access public
+          for pkg in packages/constants packages/directives packages/locale packages/theme-chalk packages/utils packages/hooks packages/components; do
+            echo "Publishing $pkg..."
+            cd $pkg && npm publish --access public && cd ../..
+          done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish main package
+        run: npm publish --access public
         working-directory: packages/pipit-ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
