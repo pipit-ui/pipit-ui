@@ -1,6 +1,6 @@
 {
   "name": "@pipit-ui/hooks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hooks for pipit-ui",
   "type": "module",
   "main": "dist/lib/index.js",

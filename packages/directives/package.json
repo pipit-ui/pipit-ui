@@ -1,6 +1,6 @@
 {
   "name": "@pipit-ui/directives",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Directives for pipit-ui",
   "type": "module",
   "main": "dist/lib/index.js",
