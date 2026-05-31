@@ -32,7 +32,8 @@ jobs:
       - run: pnpm build
 
       - name: Verify package contents
-        run: npm -C packages/pipit-ui pack --dry-run
+        run: npm pack --dry-run
+        working-directory: packages/pipit-ui
 
       - name: Publish to npm
         run: pnpm -C packages/pipit-ui publish --no-git-checks --access public
