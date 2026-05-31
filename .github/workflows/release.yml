@@ -36,7 +36,8 @@ jobs:
         working-directory: packages/pipit-ui
 
       - name: Publish to npm
-        run: pnpm -C packages/pipit-ui publish --no-git-checks --access public
+        run: pnpm publish --no-git-checks --access public
+        working-directory: packages/pipit-ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
