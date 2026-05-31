@@ -4,7 +4,7 @@ export default defineConfig({
   title: 'Pipit UI',
   description: 'A Vue 3 based Component Library',
   lang: 'zh-CN',
-  base: '/',
+  base: '/pipit-ui/',
   lastUpdated: true,
   cleanUrls: true,
 
