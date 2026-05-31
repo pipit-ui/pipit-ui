@@ -36,7 +36,9 @@ jobs:
         working-directory: packages/pipit-ui
 
       - name: Publish to npm
-        run: npm publish --access public
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > packages/pipit-ui/.npmrc
+          npm publish --access public
         working-directory: packages/pipit-ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
